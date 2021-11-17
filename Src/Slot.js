@@ -16,6 +16,7 @@ $textSplit[$sendMessage[{author:$username's slot game:$replaceText[$replaceText[
 };yes]; ]
 $setGlobalUserVar[slotbet;$message]
 $onlyIf[$isNumber[$message]==true;:x: Not a Number]
+$onlyIf[$getGlobalUserVar[cash]>=$multi[$message;1];You dont have enough]
 $onlyIf[$checkContains[$message;-;\;/;.;,;[;];_;+;$;?;(;);{;};!;@;#;%;^;&;*;|;>;<]==true;Please do noy use symbols]`
 }, {
  type: 'awaitedCommand',
